@@ -1,0 +1,161 @@
+/* COMPONENTS */
+.banner {
+
+    margin: 15px 0px;
+
+    .logo {
+        width: 60px;
+        height: 60px;
+        padding: 0px 15px 0 0;
+        float: left;
+    }
+    .main-name {
+
+        font-family: $font-Cinzel;
+        font-size: 35px;
+        font-weight: bold;
+        color: $color-primary;
+        text-align: center;
+        float: left;
+    }
+
+}
+
+.navigation {
+    font-family: $font-Cinzel;
+    font-size: 25px;
+    font-weight: bold;
+    color: $color-primary;
+    text-align: center;
+    float: right;
+    &-entry {
+        @media screen and (min-width: 450px) {
+            float: left;
+        }
+        padding: 40px 5px 0px;
+    }
+}
+
+.main-heading {
+    font-family: $font-Marck;
+    font-size: 90px;
+    font-weight: 300;
+    color: $color-secondary;
+    margin-bottom: 40px;
+    text-align: center;
+
+    @media screen and (max-width: 650px) {
+        font-size: 60px;
+    }
+    @media screen and (max-width: 400px) {
+        font-size: 45px;
+    }
+
+    &-dark {
+        @extend .main-heading;
+        color: $color-dark;
+    }
+
+    &-purple {
+        @extend .main-heading;
+        background: linear-gradient($color-blue,$color-purple);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &-Cinzel {
+        @extend .main-heading;
+        font-family: $font-Cinzel;
+        @media screen and (max-width: 768px) {
+            font-size: 50px;
+        }
+        &-small {
+            @extend .main-heading-Cinzel;
+        
+            @media screen and (max-width: 600px) {
+                font-size: 40px
+            }
+            @media screen and (max-width: 450px) {
+                font-size: 30px;
+            }
+        }
+        &-dark {
+            @extend .main-heading-Cinzel;
+            color: $color-dark;
+        }    
+        &-blue {
+            @extend .main-heading-Cinzel;
+            font-weight: bold;
+            color: $color-blue;
+        }
+        &-red {
+            @extend .main-heading-Cinzel;
+            font-weight: bold;
+            color: $color-red;
+        }
+        &-bluered {
+            @extend .main-heading-Cinzel;
+            font-weight: bold;
+            background: linear-gradient(to right,$color-blue,$color-red);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+        }
+    }
+
+    &-Roboto {
+        font-family: $font-Roboto;
+        font-size: 65px;
+        font-weight: 400;
+        color: $color-secondary;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        text-align: center;
+        @media screen and (max-width: 768px) {
+            font-size: 50px;
+        }
+        @media screen and (max-width: 600px) {
+            font-size: 40px
+        }
+        @media screen and (max-width: 450px) {
+            font-size: 30px;
+        }
+        &-dark {
+            @extend .main-heading-Roboto;
+            color: $color-dark;
+        }
+    }
+}
+
+.description {
+    font-family: $font-Roboto;
+    font-size: 25px;
+    color: $color-dark;
+    text-align: justify;
+    overflow-wrap: break-word; 
+    @media screen and (max-width: 450px) {
+        font-size: 20px;
+    }
+}
+
+.links {
+    @extend .description;
+    text-align: left;
+}
+
+.small-heading {
+    @extend .description;
+    text-align: left;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.back-to-top {
+    font-family: $font-Cinzel;
+    font-size: 35px;
+    font-weight: bold;
+    color: $color-primary;
+    text-align: right;
+    text-decoration: none;
+    @include invisibleLinks($color-primary);
+}

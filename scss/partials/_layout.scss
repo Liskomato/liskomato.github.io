@@ -1,0 +1,207 @@
+.header {
+    
+    width: 100%;
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;   
+    background-color: $color-white;
+    @media screen and (max-width: 768px) {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    a {
+        text-decoration: none;
+        display: flex;
+        padding: 0 15px;
+        color: $color-primary;
+    }
+    a:focus, a:active, a:hover {
+        color: $color-primary;
+    }
+
+
+    ul {
+        list-style: none;
+    }
+}
+
+.body1{
+    width: 100%;
+    height: 75vw;
+    position: relative;
+    background: linear-gradient(rgba($color-black,0.4),rgba($color-black,0.4)), url(../images/Spore_Oculus.png) center no-repeat;
+    background-size:150%;
+    
+    @media screen and (max-width: 768px) {
+        height: 100vw;
+        background-size: 250%;
+    }
+
+    &-headerbanner {
+        @include centering(50%);
+        }
+}
+
+.body2 {
+    height: auto;
+    margin: 3% 1%;
+    display: flex;
+    align-items: center;
+    background: $color-white;
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+
+    &-image {
+        
+        position: relative;
+        @media screen and (min-width: 768px) {
+            width: 55%;
+        }
+        img, video {
+            width: 100%;
+        }
+
+        &-cropped {
+            padding: 5%;
+            max-height: 600px;
+            max-width: 80%;
+            @media screen and (min-width: 768px) {
+                max-width: 40%;
+            }
+            iframe {
+                aspect-ratio: 16/9;
+                width: 100% !important;
+            }
+        }        
+    }
+    &-textbody {
+        @media screen and (min-width: 1250px) {
+            padding: 0 100px;
+            width: 60%;
+        }
+        @media screen and (min-width: 768px) {
+            padding: 0 50px;
+            width: 50%;
+        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 50px;
+        box-sizing: border-box;
+    }
+
+}
+
+.body3 {
+    width: 100%;
+    height: 75vh;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    @media screen and (max-width: 600px) {
+        height: 100vw;
+    }
+
+    &-part1 {
+        @extend .body3;
+        background: linear-gradient(rgba($color-black,0.4),rgba($color-black,0.4)), url(../images/FloatyNGetaway.png) center no-repeat;
+        background-size: cover;
+    }
+    &-part2 {
+        @extend .body3;
+        background: linear-gradient(rgba($color-black,0.4),rgba($color-black,0.4)), url(../images/Spore_StavesChosen.png) center no-repeat;
+        background-size: cover;
+    }
+    &-part3 {
+        @extend .body3;
+        background: linear-gradient(rgba($color-black,0.4),rgba($color-black,0.4)), url(../images/Spore_LiskosHouse.png) center no-repeat;
+        background-size: cover;
+    }
+    &-banner {
+        @include centering(50%);
+    }
+    @include invisibleLinks($color-secondary);
+}
+
+.bar {
+    height: 10vw;
+    background: linear-gradient(rgba($color-black,0.4),rgba($color-black,0.4));
+}
+
+.lowbody {
+    align-items: center;
+    width: 100%;
+    height: 40vw;
+    @media screen and (min-width: 768px) {
+        height: 30vw;
+    }
+
+    .main-heading {
+        margin-bottom: 0;
+    }
+
+    &-programming{
+        height: inherit;
+        position: relative;
+        background: linear-gradient(rgba($color-black,0.4),rgba($color-black,0.4)), url(../images/Spore_EarthCity.png) center no-repeat;
+        background-size: 150%;
+    }
+    &-stories {
+        height: inherit;
+        position: relative;
+        background: linear-gradient(rgba($color-black,0.4),rgba($color-black,0.4)), url(../images/Spore_ThreeStavesCollage.png) center no-repeat;
+        background-size: 150%;
+    }
+    &-banner {
+        @include centering(50%);
+    }
+
+}
+
+.checkbox {
+    display: none;
+}
+
+.spore {
+    width: 100vw;
+    background: $color-white;
+    overflow:hidden;
+    overflow-wrap: break-word;
+    &-box {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        cursor: pointer;
+        transition: transform 0.5s;
+    }   
+
+    &-checkbox-mod {
+        @extend .checkbox;
+    }
+
+    &-checkbox-adv {
+        @extend .checkbox;
+    }
+
+    &-checkbox-mod:checked ~ .spore-content-mod {
+        display: block;
+    }
+    &-checkbox-adv:checked ~ .spore-content-adv {
+        display: block;
+    }
+
+    &-content-mod {
+        width: inherit;
+        position: relative;
+        display: none;
+    }
+
+    &-content-adv {
+        width: inherit;
+        position: relative;
+        display: none;
+    }
+}

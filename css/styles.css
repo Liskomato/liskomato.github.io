@@ -1,0 +1,388 @@
+/*VARIABLES*/
+/* BASE */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fff;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .header {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.header a {
+  text-decoration: none;
+  display: flex;
+  padding: 0 15px;
+  color: #0166ff;
+}
+.header a:focus, .header a:active, .header a:hover {
+  color: #0166ff;
+}
+.header ul {
+  list-style: none;
+}
+
+.body1 {
+  width: 100%;
+  height: 75vw;
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/Spore_Oculus.png) center no-repeat;
+  background-size: 150%;
+}
+@media screen and (max-width: 768px) {
+  .body1 {
+    height: 100vw;
+    background-size: 250%;
+  }
+}
+.body1-headerbanner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.body2 {
+  height: auto;
+  margin: 3% 1%;
+  display: flex;
+  align-items: center;
+  background: #fff;
+}
+@media screen and (max-width: 768px) {
+  .body2 {
+    flex-direction: column;
+  }
+}
+.body2-image {
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .body2-image {
+    width: 55%;
+  }
+}
+.body2-image img, .body2-image video {
+  width: 100%;
+}
+.body2-image-cropped {
+  padding: 5%;
+  max-height: 600px;
+  max-width: 80%;
+}
+@media screen and (min-width: 768px) {
+  .body2-image-cropped {
+    max-width: 40%;
+  }
+}
+.body2-image-cropped iframe {
+  aspect-ratio: 16/9;
+  width: 100% !important;
+}
+.body2-textbody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 1250px) {
+  .body2-textbody {
+    padding: 0 100px;
+    width: 60%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .body2-textbody {
+    padding: 0 50px;
+    width: 50%;
+  }
+}
+
+.body3, .body3-part3, .body3-part2, .body3-part1 {
+  width: 100%;
+  height: 75vh;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+}
+@media screen and (max-width: 600px) {
+  .body3, .body3-part3, .body3-part2, .body3-part1 {
+    height: 100vw;
+  }
+}
+.body3-part1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/FloatyNGetaway.png) center no-repeat;
+  background-size: cover;
+}
+.body3-part2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/Spore_StavesChosen.png) center no-repeat;
+  background-size: cover;
+}
+.body3-part3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/Spore_LiskosHouse.png) center no-repeat;
+  background-size: cover;
+}
+.body3-banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.body3 a, .body3-part1 a, .body3-part2 a, .body3-part3 a {
+  text-decoration: none;
+  color: #ccc;
+}
+.body3 a:focus, .body3-part1 a:focus, .body3-part2 a:focus, .body3-part3 a:focus, .body3 a:active, .body3-part1 a:active, .body3-part2 a:active, .body3-part3 a:active, .body3 a:hover, .body3-part1 a:hover, .body3-part2 a:hover, .body3-part3 a:hover {
+  color: #ccc;
+}
+
+.bar {
+  height: 10vw;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+}
+
+.lowbody {
+  align-items: center;
+  width: 100%;
+  height: 40vw;
+}
+@media screen and (min-width: 768px) {
+  .lowbody {
+    height: 30vw;
+  }
+}
+.lowbody .main-heading, .lowbody .main-heading-Cinzel, .lowbody .main-heading-Cinzel-bluered, .lowbody .main-heading-Cinzel-red, .lowbody .main-heading-Cinzel-blue, .lowbody .main-heading-Cinzel-dark, .lowbody .main-heading-Cinzel-small, .lowbody .main-heading-purple, .lowbody .main-heading-dark {
+  margin-bottom: 0;
+}
+.lowbody-programming {
+  height: inherit;
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/Spore_EarthCity.png) center no-repeat;
+  background-size: 150%;
+}
+.lowbody-stories {
+  height: inherit;
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/Spore_ThreeStavesCollage.png) center no-repeat;
+  background-size: 150%;
+}
+.lowbody-banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.checkbox, .spore-checkbox-adv, .spore-checkbox-mod {
+  display: none;
+}
+
+.spore {
+  width: 100vw;
+  background: #fff;
+  overflow: hidden;
+  overflow-wrap: break-word;
+}
+.spore-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+.spore-checkbox-mod:checked ~ .spore-content-mod {
+  display: block;
+}
+.spore-checkbox-adv:checked ~ .spore-content-adv {
+  display: block;
+}
+.spore-content-mod {
+  width: inherit;
+  position: relative;
+  display: none;
+}
+.spore-content-adv {
+  width: inherit;
+  position: relative;
+  display: none;
+}
+
+/* COMPONENTS */
+.banner {
+  margin: 15px 0px;
+}
+.banner .logo {
+  width: 60px;
+  height: 60px;
+  padding: 0px 15px 0 0;
+  float: left;
+}
+.banner .main-name {
+  font-family: Cinzel;
+  font-size: 35px;
+  font-weight: bold;
+  color: #0166ff;
+  text-align: center;
+  float: left;
+}
+
+.navigation {
+  font-family: Cinzel;
+  font-size: 25px;
+  font-weight: bold;
+  color: #0166ff;
+  text-align: center;
+  float: right;
+}
+.navigation-entry {
+  padding: 40px 5px 0px;
+}
+@media screen and (min-width: 450px) {
+  .navigation-entry {
+    float: left;
+  }
+}
+
+.main-heading, .main-heading-Cinzel, .main-heading-Cinzel-bluered, .main-heading-Cinzel-red, .main-heading-Cinzel-blue, .main-heading-Cinzel-dark, .main-heading-Cinzel-small, .main-heading-purple, .main-heading-dark {
+  font-family: "Marck Script", cursive;
+  font-size: 90px;
+  font-weight: 300;
+  color: #ccc;
+  margin-bottom: 40px;
+  text-align: center;
+}
+@media screen and (max-width: 650px) {
+  .main-heading, .main-heading-Cinzel, .main-heading-Cinzel-bluered, .main-heading-Cinzel-red, .main-heading-Cinzel-blue, .main-heading-Cinzel-dark, .main-heading-Cinzel-small, .main-heading-purple, .main-heading-dark {
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .main-heading, .main-heading-Cinzel, .main-heading-Cinzel-bluered, .main-heading-Cinzel-red, .main-heading-Cinzel-blue, .main-heading-Cinzel-dark, .main-heading-Cinzel-small, .main-heading-purple, .main-heading-dark {
+    font-size: 45px;
+  }
+}
+.main-heading-dark {
+  color: #303030;
+}
+.main-heading-purple {
+  background: linear-gradient(#2e62af, #54275f);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.main-heading-Cinzel, .main-heading-Cinzel-bluered, .main-heading-Cinzel-red, .main-heading-Cinzel-blue, .main-heading-Cinzel-dark, .main-heading-Cinzel-small {
+  font-family: Cinzel;
+}
+@media screen and (max-width: 768px) {
+  .main-heading-Cinzel, .main-heading-Cinzel-bluered, .main-heading-Cinzel-red, .main-heading-Cinzel-blue, .main-heading-Cinzel-dark, .main-heading-Cinzel-small {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main-heading-Cinzel-small {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .main-heading-Cinzel-small {
+    font-size: 30px;
+  }
+}
+.main-heading-Cinzel-dark {
+  color: #303030;
+}
+.main-heading-Cinzel-blue {
+  font-weight: bold;
+  color: #2e62af;
+}
+.main-heading-Cinzel-red {
+  font-weight: bold;
+  color: #ce0000;
+}
+.main-heading-Cinzel-bluered {
+  font-weight: bold;
+  background: linear-gradient(to right, #2e62af, #ce0000);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.main-heading-Roboto, .main-heading-Roboto-dark {
+  font-family: Roboto, sans-serif;
+  font-size: 65px;
+  font-weight: 400;
+  color: #ccc;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .main-heading-Roboto, .main-heading-Roboto-dark {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main-heading-Roboto, .main-heading-Roboto-dark {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .main-heading-Roboto, .main-heading-Roboto-dark {
+    font-size: 30px;
+  }
+}
+.main-heading-Roboto-dark {
+  color: #303030;
+}
+
+.description, .small-heading, .links {
+  font-family: Roboto, sans-serif;
+  font-size: 25px;
+  color: #303030;
+  text-align: justify;
+  overflow-wrap: break-word;
+}
+@media screen and (max-width: 450px) {
+  .description, .small-heading, .links {
+    font-size: 20px;
+  }
+}
+
+.links {
+  text-align: left;
+}
+
+.small-heading {
+  text-align: left;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.back-to-top {
+  font-family: Cinzel;
+  font-size: 35px;
+  font-weight: bold;
+  color: #0166ff;
+  text-align: right;
+  text-decoration: none;
+}
+.back-to-top a {
+  text-decoration: none;
+  color: #0166ff;
+}
+.back-to-top a:focus, .back-to-top a:active, .back-to-top a:hover {
+  color: #0166ff;
+}
